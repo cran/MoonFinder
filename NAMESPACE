@@ -1,0 +1,7 @@
+exportPattern("^[[:alpha:]]+")
+import(annotate, clusterProfiler, org.Hs.eg.db, pheatmap, RColorBrewer)
+importFrom("grDevices", "colorRampPalette", "dev.new", "rainbow")
+importFrom("graphics", "legend", "par")
+importFrom("stats", "phyper")
+importFrom("utils", "write.table")
+importFrom("igraph","graph","V","induced.subgraph","graph.adjacency","clusters","get.edgelist")
