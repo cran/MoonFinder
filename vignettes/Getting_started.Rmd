@@ -1,0 +1,61 @@
+---
+title: "Getting_started"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Getting started with the MoonFinder package}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+## Getting Started with the MoonFinder package
+### Lixin Cheng
+### 2019-10-01
+
+## Overview:
+MoonFinder is developed for the identification of moonlighting RNAs at the genome level based on the functional annotation and interactome data of ncRNAs and proteins.
+MoonFinder provides an extensive framework for the detection of protein modules and establishment of RNA-module associations.
+
+## Citation:
+Identification and characterization of moonlighting long non-coding RNAs based on RNA and protein interactome.  Bioinformatics, 2018.   
+A network-based algorithm for the identification of moonlighting non-coding RNAs and its application in sepsis.  Briefings in Bioinformatics, 2019
+
+## Getting started:
+Identify the moonlight lncRNAs
+```{r}
+library(MoonFinder)
+data("ppi","simMatBP.Resnik","moduleList","rna2module")
+rnaStatMat = moonlightingCoefficient(rna2module,simMatBP.Resnik)
+head(rnaStatMat)
+```
+
+Set up the SDI threshold according to SDI distributions
+```{r}
+sdi = as.numeric(rnaStatMat[,3])
+dev.new(width=4, height=4)
+hist(sdi,border=FALSE,xlab="MC",xlim=c(0,1),ylim=c(0,4),
+    breaks=seq(0,1,0.02),prob=TRUE,main="Resnik")
+lines(density(sdi),lwd=2,col="orange")
+mlncRNA = rnaStatMat[sdi>0.4,1]
+```
+
+Illustration of the mediated modules for a given moonlighting ncRNA.
+```{r,fig.width = 6,fig.height = 6}
+library(igraph)
+g <- graph.edgelist(ppi,directed=FALSE)
+moduleHeatmap("CRNDE",rna2module,moduleList,g)
+```
+
+Comparison of the functions enriched by different modules:
+
+```{r,fig.width = 8}
+library(clusterProfiler)
+dev.new(width=14, height=7)
+moduleFunctionComparing("CRNDE",rna2module,moduleList)
+```

@@ -16,7 +16,8 @@ moduleCombiding(inputList, OScutoff = 0.5)
   \item{OScutoff}{the threshold of overlapping score.}
 }
 \details{
-Combine modules from different resources. For example, one set is computational predicted while the other sets are collected from databases.
+Combine modules from different resources. For example, one set is computational
+predicted while the other sets are collected from databases.
 }
 \value{
   \item{outputList}{a list of combined modules.}

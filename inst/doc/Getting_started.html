@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+<title>Getting_started</title>
+
+
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+
+</style>
+<script>
+// apply pandoc div.sourceCode style to pre.sourceCode instead
+(function() {
+  var sheets = document.styleSheets;
+  for (var i = 0; i < sheets.length; i++) {
+    if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
+    try { var rules = sheets[i].cssRules; } catch (e) { continue; }
+    for (var j = 0; j < rules.length; j++) {
+      var rule = rules[j];
+      // check if there is a div.sourceCode rule
+      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") continue;
+      var style = rule.style.cssText;
+      // check if color or background-color is set
+      if (rule.style.color === '' && rule.style.backgroundColor === '') continue;
+      // replace div.sourceCode by a pre.sourceCode rule
+      sheets[i].deleteRule(j);
+      sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
+    }
+  }
+})();
+</script>
+
+
+
+<style type="text/css">body {
+background-color: #fff;
+margin: 1em auto;
+max-width: 700px;
+overflow: visible;
+padding-left: 2em;
+padding-right: 2em;
+font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size: 14px;
+line-height: 1.35;
+}
+#header {
+text-align: center;
+}
+#TOC {
+clear: both;
+margin: 0 0 10px 10px;
+padding: 4px;
+width: 400px;
+border: 1px solid #CCCCCC;
+border-radius: 5px;
+background-color: #f6f6f6;
+font-size: 13px;
+line-height: 1.3;
+}
+#TOC .toctitle {
+font-weight: bold;
+font-size: 15px;
+margin-left: 5px;
+}
+#TOC ul {
+padding-left: 40px;
+margin-left: -1.5em;
+margin-top: 5px;
+margin-bottom: 5px;
+}
+#TOC ul ul {
+margin-left: -2em;
+}
+#TOC li {
+line-height: 16px;
+}
+table {
+margin: 1em auto;
+border-width: 1px;
+border-color: #DDDDDD;
+border-style: outset;
+border-collapse: collapse;
+}
+table th {
+border-width: 2px;
+padding: 5px;
+border-style: inset;
+}
+table td {
+border-width: 1px;
+border-style: inset;
+line-height: 18px;
+padding: 5px 5px;
+}
+table, table th, table td {
+border-left-style: none;
+border-right-style: none;
+}
+table thead, table tr.even {
+background-color: #f7f7f7;
+}
+p {
+margin: 0.5em 0;
+}
+blockquote {
+background-color: #f6f6f6;
+padding: 0.25em 0.75em;
+}
+hr {
+border-style: solid;
+border: none;
+border-top: 1px solid #777;
+margin: 28px 0;
+}
+dl {
+margin-left: 0;
+}
+dl dd {
+margin-bottom: 13px;
+margin-left: 13px;
+}
+dl dt {
+font-weight: bold;
+}
+ul {
+margin-top: 0;
+}
+ul li {
+list-style: circle outside;
+}
+ul ul {
+margin-bottom: 0;
+}
+pre, code {
+background-color: #f7f7f7;
+border-radius: 3px;
+color: #333;
+white-space: pre-wrap; 
+}
+pre {
+border-radius: 3px;
+margin: 5px 0px 10px 0px;
+padding: 10px;
+}
+pre:not([class]) {
+background-color: #f7f7f7;
+}
+code {
+font-family: Consolas, Monaco, 'Courier New', monospace;
+font-size: 85%;
+}
+p > code, li > code {
+padding: 2px 0px;
+}
+div.figure {
+text-align: center;
+}
+img {
+background-color: #FFFFFF;
+padding: 2px;
+border: 1px solid #DDDDDD;
+border-radius: 3px;
+border: 1px solid #CCCCCC;
+margin: 0 5px;
+}
+h1 {
+margin-top: 0;
+font-size: 35px;
+line-height: 40px;
+}
+h2 {
+border-bottom: 4px solid #f7f7f7;
+padding-top: 10px;
+padding-bottom: 2px;
+font-size: 145%;
+}
+h3 {
+border-bottom: 2px solid #f7f7f7;
+padding-top: 10px;
+font-size: 120%;
+}
+h4 {
+border-bottom: 1px solid #f7f7f7;
+margin-left: 8px;
+font-size: 105%;
+}
+h5, h6 {
+border-bottom: 1px solid #ccc;
+font-size: 105%;
+}
+a {
+color: #0033dd;
+text-decoration: none;
+}
+a:hover {
+color: #6666ff; }
+a:visited {
+color: #800080; }
+a:visited:hover {
+color: #BB00BB; }
+a[href^="http:"] {
+text-decoration: underline; }
+a[href^="https:"] {
+text-decoration: underline; }
+
+code > span.kw { color: #555; font-weight: bold; } 
+code > span.dt { color: #902000; } 
+code > span.dv { color: #40a070; } 
+code > span.bn { color: #d14; } 
+code > span.fl { color: #d14; } 
+code > span.ch { color: #d14; } 
+code > span.st { color: #d14; } 
+code > span.co { color: #888888; font-style: italic; } 
+code > span.ot { color: #007020; } 
+code > span.al { color: #ff0000; font-weight: bold; } 
+code > span.fu { color: #900; font-weight: bold; }  code > span.er { color: #a61717; background-color: #e3d2d2; } 
+</style>
+
+
+
+
+</head>
+
+<body>
+
+
+
+
+<h1 class="title toc-ignore">Getting_started</h1>
+
+
+
+<div id="getting-started-with-the-moonfinder-package" class="section level2">
+<h2>Getting Started with the MoonFinder package</h2>
+<div id="lixin-cheng" class="section level3">
+<h3>Lixin Cheng</h3>
+</div>
+<div id="section" class="section level3">
+<h3>2019-10-01</h3>
+</div>
+</div>
+<div id="overview" class="section level2">
+<h2>Overview:</h2>
+<p>MoonFinder is developed for the identification of moonlighting RNAs at the genome level based on the functional annotation and interactome data of ncRNAs and proteins. MoonFinder provides an extensive framework for the detection of protein modules and establishment of RNA-module associations.</p>
+</div>
+<div id="citation" class="section level2">
+<h2>Citation:</h2>
+<p>Identification and characterization of moonlighting long non-coding RNAs based on RNA and protein interactome. Bioinformatics, 2018.<br />
+A network-based algorithm for the identification of moonlighting non-coding RNAs and its application in sepsis. Briefings in Bioinformatics, 2019</p>
+</div>
+<div id="getting-started" class="section level2">
+<h2>Getting started:</h2>
+<p>Identify the moonlight lncRNAs</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">library</span>(MoonFinder)</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="co">#&gt; </span></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="co">#&gt; </span></span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="kw">data</span>(<span class="st">&quot;ppi&quot;</span>,<span class="st">&quot;simMatBP.Resnik&quot;</span>,<span class="st">&quot;moduleList&quot;</span>,<span class="st">&quot;rna2module&quot;</span>)</span>
+<span id="cb1-5"><a href="#cb1-5"></a>rnaStatMat =<span class="st"> </span><span class="kw">moonlightingCoefficient</span>(rna2module,simMatBP.Resnik)</span>
+<span id="cb1-6"><a href="#cb1-6"></a><span class="kw">head</span>(rnaStatMat)</span>
+<span id="cb1-7"><a href="#cb1-7"></a><span class="co">#&gt;      ncRNA   Module Number SDI     </span></span>
+<span id="cb1-8"><a href="#cb1-8"></a><span class="co">#&gt; [1,] &quot;CRNDE&quot; &quot;5&quot;           &quot;0.4044&quot;</span></span>
+<span id="cb1-9"><a href="#cb1-9"></a><span class="co">#&gt; [2,] &quot;NEAT1&quot; &quot;5&quot;           &quot;0.4606&quot;</span></span>
+<span id="cb1-10"><a href="#cb1-10"></a><span class="co">#&gt; [3,] &quot;ZFAS1&quot; &quot;6&quot;           &quot;0.3003&quot;</span></span>
+<span id="cb1-11"><a href="#cb1-11"></a><span class="co">#&gt; [4,] &quot;GAS5&quot;  &quot;5&quot;           &quot;0.3271&quot;</span></span>
+<span id="cb1-12"><a href="#cb1-12"></a><span class="co">#&gt; [5,] &quot;JPX&quot;   &quot;7&quot;           &quot;0.3058&quot;</span></span>
+<span id="cb1-13"><a href="#cb1-13"></a><span class="co">#&gt; [6,] &quot;SNHG1&quot; &quot;3&quot;           &quot;0.6424&quot;</span></span></code></pre></div>
+<p>Set up the SDI threshold according to SDI distributions</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>sdi =<span class="st"> </span><span class="kw">as.numeric</span>(rnaStatMat[,<span class="dv">3</span>])</span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="kw">dev.new</span>(<span class="dt">width=</span><span class="dv">4</span>, <span class="dt">height=</span><span class="dv">4</span>)</span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="kw">hist</span>(sdi,<span class="dt">border=</span><span class="ot">FALSE</span>,<span class="dt">xlab=</span><span class="st">&quot;MC&quot;</span>,<span class="dt">xlim=</span><span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">1</span>),<span class="dt">ylim=</span><span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">4</span>),</span>
+<span id="cb2-4"><a href="#cb2-4"></a>    <span class="dt">breaks=</span><span class="kw">seq</span>(<span class="dv">0</span>,<span class="dv">1</span>,<span class="fl">0.02</span>),<span class="dt">prob=</span><span class="ot">TRUE</span>,<span class="dt">main=</span><span class="st">&quot;Resnik&quot;</span>)</span>
+<span id="cb2-5"><a href="#cb2-5"></a><span class="kw">lines</span>(<span class="kw">density</span>(sdi),<span class="dt">lwd=</span><span class="dv">2</span>,<span class="dt">col=</span><span class="st">&quot;orange&quot;</span>)</span>
+<span id="cb2-6"><a href="#cb2-6"></a>mlncRNA =<span class="st"> </span>rnaStatMat[sdi<span class="op">&gt;</span><span class="fl">0.4</span>,<span class="dv">1</span>]</span></code></pre></div>
+<p>Illustration of the mediated modules for a given moonlighting ncRNA.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw">library</span>(igraph)</span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="co">#&gt; Warning: package &#39;igraph&#39; was built under R version 3.5.3</span></span>
+<span id="cb3-3"><a href="#cb3-3"></a><span class="co">#&gt; </span></span>
+<span id="cb3-4"><a href="#cb3-4"></a><span class="co">#&gt; Attaching package: &#39;igraph&#39;</span></span>
+<span id="cb3-5"><a href="#cb3-5"></a><span class="co">#&gt; The following objects are masked from &#39;package:stats&#39;:</span></span>
+<span id="cb3-6"><a href="#cb3-6"></a><span class="co">#&gt; </span></span>
+<span id="cb3-7"><a href="#cb3-7"></a><span class="co">#&gt;     decompose, spectrum</span></span>
+<span id="cb3-8"><a href="#cb3-8"></a><span class="co">#&gt; The following object is masked from &#39;package:base&#39;:</span></span>
+<span id="cb3-9"><a href="#cb3-9"></a><span class="co">#&gt; </span></span>
+<span id="cb3-10"><a href="#cb3-10"></a><span class="co">#&gt;     union</span></span>
+<span id="cb3-11"><a href="#cb3-11"></a>g &lt;-<span class="st"> </span><span class="kw">graph.edgelist</span>(ppi,<span class="dt">directed=</span><span class="ot">FALSE</span>)</span>
+<span id="cb3-12"><a href="#cb3-12"></a><span class="kw">moduleHeatmap</span>(<span class="st">&quot;CRNDE&quot;</span>,rna2module,moduleList,g)</span></code></pre></div>
+<p><img src="data:image/png;base64,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" /><!-- --></p>
+<p>Comparison of the functions enriched by different modules:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw">library</span>(clusterProfiler)</span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="co">#&gt; clusterProfiler v3.10.1  For help: https://guangchuangyu.github.io/software/clusterProfiler</span></span>
+<span id="cb4-3"><a href="#cb4-3"></a><span class="co">#&gt; </span></span>
+<span id="cb4-4"><a href="#cb4-4"></a><span class="co">#&gt; If you use clusterProfiler in published research, please cite:</span></span>
+<span id="cb4-5"><a href="#cb4-5"></a><span class="co">#&gt; Guangchuang Yu, Li-Gen Wang, Yanyan Han, Qing-Yu He. clusterProfiler: an R package for comparing biological themes among gene clusters. OMICS: A Journal of Integrative Biology. 2012, 16(5):284-287.</span></span>
+<span id="cb4-6"><a href="#cb4-6"></a><span class="co">#&gt; </span></span>
+<span id="cb4-7"><a href="#cb4-7"></a><span class="co">#&gt; Attaching package: &#39;clusterProfiler&#39;</span></span>
+<span id="cb4-8"><a href="#cb4-8"></a><span class="co">#&gt; The following object is masked from &#39;package:igraph&#39;:</span></span>
+<span id="cb4-9"><a href="#cb4-9"></a><span class="co">#&gt; </span></span>
+<span id="cb4-10"><a href="#cb4-10"></a><span class="co">#&gt;     simplify</span></span>
+<span id="cb4-11"><a href="#cb4-11"></a><span class="kw">dev.new</span>(<span class="dt">width=</span><span class="dv">14</span>, <span class="dt">height=</span><span class="dv">7</span>)</span>
+<span id="cb4-12"><a href="#cb4-12"></a><span class="kw">moduleFunctionComparing</span>(<span class="st">&quot;CRNDE&quot;</span>,rna2module,moduleList)</span></code></pre></div>
+</div>
+
+
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

@@ -5,7 +5,8 @@
 ncRNA target moudles
 }
 \description{
-a list of moudles targeted by ncRNAs, which is a subset of the combinedModuleList. Because not all the moduels are targeted by a ncRNA.
+a list of moudles targeted by ncRNAs, which is a subset of the combinedModuleList.
+Because not all the moduels are targeted by a ncRNA.
 }
 \usage{data("moduleList")}
 \format{

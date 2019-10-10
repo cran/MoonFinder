@@ -21,6 +21,7 @@ MoonFinder: a framework for the identification of moonlighting non-coding RNAs.
 \keyword{ package }
 \examples{
 ## 1) Identify the moonlight lncRNAs
+# install.packages("ggraph") 
 data("ppi","simMatBP.Resnik","moduleList","rna2module")
 rnaStatMat = moonlightingCoefficient(rna2module,simMatBP.Resnik)
 head(rnaStatMat)
@@ -30,7 +31,7 @@ head(rnaStatMat)
 sdi = as.numeric(rnaStatMat[,3])
 dev.new(width=4, height=4)
 hist(sdi,border=FALSE,xlab="MC",xlim=c(0,1),ylim=c(0,4),
-	breaks=seq(0,1,0.02),prob=TRUE,main="Resnik")
+    breaks=seq(0,1,0.02),prob=TRUE,main="Resnik")
 lines(density(sdi),lwd=2,col="orange")
 mlncRNA = rnaStatMat[sdi>0.4,1]
 

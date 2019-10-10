@@ -5,7 +5,8 @@
 a semantic similarity (Rel) matrix
 }
 \description{
-An adjacent matrix of the semantic similarity (Rel) among differnet protein modules.
+An adjacent matrix of the semantic similarity (Rel) 
+among differnet protein modules.
 }
 \usage{data("simMatBP.Rel")}
 \format{
