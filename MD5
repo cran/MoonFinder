@@ -1,4 +1,4 @@
-1ee47afd39a0e7ce28233f2cb6b945f5 *DESCRIPTION
+7f7f0cbfe21ededeba79c843129a1608 *DESCRIPTION
 bac1ba278fdd15647a8d3ce2beedcfbf *NAMESPACE
 33886003859357548c7c7e5d428f2f6e *NEWS
 9f50aff9ea2c8873662d06a40b05c8e2 *R/SDI.R
@@ -23,9 +23,9 @@ e46bc3c7d61e25e9d4c838fd1c6d3238 *data/pcdqModuleList.rda
 93ea8439544a3b77343700540df90f65 *data/simMatBP.Resnik.rda
 05d77eaec389757fc2a1b323daf380fe *data/simMatBP.Wang.rda
 1f370bf7d4c19927ab139901dcf09d41 *data/uniGene.rda
-17002ae33a2a965a90c2f39f3a52d2c7 *inst/doc/Getting_started.R
-596f5754651aa5c8aee55079209a27f1 *inst/doc/Getting_started.Rmd
-514e0367e4d7f19f30eb37a7d3cf8d5f *inst/doc/Getting_started.html
+af1e1ef8eb36462c6626f79a1429d55d *inst/doc/Getting_started.R
+8e24545fe444cb29201182cafb38ad70 *inst/doc/Getting_started.Rmd
+11f4b35377b82c93418bb3b6016cc1a7 *inst/doc/Getting_started.html
 07378b0e4ba0490c0ee5ce9bf876de88 *man/MoonFinder-package.Rd
 789a7bfc454d51f826d684167409e81e *man/SDI.Rd
 22062b7f57c391b9b6498feb511bf08f *man/combinedModuleList.Rd
@@ -48,4 +48,4 @@ c0c244f992e1c5758e1d4615adc2c281 *man/simMatBP.Jiang.Rd
 794db714a33291e5f01de96b88c41467 *man/simMatBP.Resnik.Rd
 ac73b87a530c7081f02f5f07e033313b *man/simMatBP.Wang.Rd
 842d236213fabe07663339eb6178a504 *man/uniGene.Rd
-596f5754651aa5c8aee55079209a27f1 *vignettes/Getting_started.Rmd
+8e24545fe444cb29201182cafb38ad70 *vignettes/Getting_started.Rmd

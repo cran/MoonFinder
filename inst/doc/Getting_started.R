@@ -5,6 +5,11 @@ knitr::opts_chunk$set(
 )
 
 ## ------------------------------------------------------------------------
+# BiocManager::install("org.Hs.eg.db") 
+# BiocManager::install("clusterProfiler") 
+# install.packages("MoonFinder") 
+library(org.Hs.eg.db)
+library(clusterProfiler)
 library(MoonFinder)
 data("ppi","simMatBP.Resnik","moduleList","rna2module")
 rnaStatMat = moonlightingCoefficient(rna2module,simMatBP.Resnik)

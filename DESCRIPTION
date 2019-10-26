@@ -1,7 +1,7 @@
 Package: MoonFinder
 Type: Package
 Title: Identify Moonlighting ncRNAs
-Version: 1.0.2
+Version: 1.0.3
 Date: 2019-10-1
 Author: Lixin Cheng
 Maintainer: Lixin Cheng <easonlcheng@gmail.com>
@@ -17,6 +17,6 @@ RoxygenNote: 6.1.1
 Suggests: knitr,rmarkdown, usethis
 Encoding: UTF-8
 NeedsCompilation: no
-Packaged: 2019-10-10 01:33:39 UTC; Administrator
+Packaged: 2019-10-26 10:02:44 UTC; Administrator
 Repository: CRAN
-Date/Publication: 2019-10-10 04:20:07 UTC
+Date/Publication: 2019-10-26 10:30:02 UTC

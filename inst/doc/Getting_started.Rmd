@@ -29,6 +29,11 @@ A network-based algorithm for the identification of moonlighting non-coding RNAs
 ## Getting started:
 Identify the moonlight lncRNAs
 ```{r}
+# BiocManager::install("org.Hs.eg.db") 
+# BiocManager::install("clusterProfiler") 
+# install.packages("MoonFinder") 
+library(org.Hs.eg.db)
+library(clusterProfiler)
 library(MoonFinder)
 data("ppi","simMatBP.Resnik","moduleList","rna2module")
 rnaStatMat = moonlightingCoefficient(rna2module,simMatBP.Resnik)
